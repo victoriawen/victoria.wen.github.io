@@ -1,0 +1,283 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported Typfaces */
+
+@font-face {
+    font-family:Montserrat;
+    src: url(../fonts/sans-serif/montserrat-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:Josefinslab;
+    src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:roboto;
+    src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:ultra;
+    src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:rozhaone;
+    src: url(../fonts/serif/rozhaone-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Typography Styles */
+
+h1 {
+    letter-spacing: .125rem;
+    font-family:roboto, sans-serif;
+    font-size:3.75rem;
+    margin:1.125rem;
+    text-align:center;
+    transform: rotate(-4deg);
+    margin-top: 2.5rem;
+    margin-bottom: 4.375rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+}
+
+h2 {
+    padding-top: 1.875rem;
+    letter-spacing: .125rem;
+    font-family:Josefinslab, serif;
+    font-size:1.875rem;
+    
+    margin-bottom: 1.25rem;
+    margin-top: 2.5rem;
+    padding-left: 5rem;
+}
+
+h3 {
+    letter-spacing: .125rem;
+    font-family:Josefinslab, serif;
+    font-size:1.5rem;
+}
+
+html {
+    font-family:Montserrat, sans-serif;
+    
+}
+
+.main-section {
+    display: flex;   
+}
+
+
+article {
+    margin-left: 5rem;
+    margin-right: 1.25rem;
+    width:65%;
+    font-size: 1rem;
+    
+}
+
+aside {
+    font-family: opensans, sans-serif;
+    font-size: .75rem;
+    word-spacing: .125rem;
+    margin-left: 3.12rem;
+    margin-right: 3.75rem;
+    border-left-style: solid;
+    border-left-color: grey;
+    padding-left: 3.125rem;
+    width: 15%;
+}
+
+
+aside img{
+    width:100%;
+}
+.expand { 
+    font-size: 0.3125rem; 
+    text-decoration: none; 
+}
+
+.article-image {
+    float: left;
+    margin-left: .125rem;
+    padding-left: .625rem;
+}
+
+ p:nth-child(1) {
+    color: black;
+    display: inline;
+    font-weight: bold;
+}
+
+
+.highlight {
+    text-transform: uppercase;
+    font-family: ultra, serif;
+    background-color: maroon;
+    padding: 1rem;
+    box-shadow:0.625rem 0.625rem 0.625rem grey;
+    border-radius: 1.875rem 0.625rem;
+    border-color: black;
+    color: beige; 
+}
+
+
+.subsection {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr); 
+    grid-column-gap: .125rem;   
+    clear:both;
+    margin: 0;
+}
+
+.subsection img{
+    width: 120%;
+    margin-left: -10%;
+}
+
+figcaption {
+    font-family: rozhaone, serif;
+    margin-left: -10%;
+    background-color: #F5F5DC;
+    width:120%;
+    padding-bottom: 5%;
+    margin-bottom: 20%;
+}
+
+.myButton {
+    font-family: Ultra, serif;
+    font-size: 1.5rem;
+    color: #eeeedd;
+    padding: 1rem 1rem;
+    background-color: #27476e;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: .333rem .333rem .333rem #333;
+}
+
+
+/* Navigation Menu */
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    transform: rotate(4deg);
+    
+}
+
+nav {
+    padding-left:1.25rem;
+    margin-top:.25rem;
+    border-top: .125rem solid gray;
+    border-bottom: .125rem solid gray;
+    word-spacing: .625rem;
+    max-width: 100%;
+    
+}
+
+nav a {
+    line-height:3;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: #33658A;
+    font-size: 1.5625rem;
+    margin-right: 3.125rem;
+    margin-left: 5rem;
+    max-width: 90% ;
+}
+
+nav a:focus,
+nav a:hover {
+    transform: rotate(-20deg);
+    text-decoration: line-through black;
+    display: inline-block;
+}
+
+
+.copyright {
+    float:left;
+    margin-left: 5rem;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    margin-top: 0rem;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    padding-top:5%;
+    text-align: right;
+    width: 90%; 
+    margin-right:3.125rem;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    margin-top: 1.875rem;
+}
